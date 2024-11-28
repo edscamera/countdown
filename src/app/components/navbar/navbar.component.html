@@ -1,0 +1,6 @@
+@if (databaseService.getUser()) {
+    {{ databaseService.getUser()?.displayName }}
+    <button mat-button (click)="databaseService.logout()">Logout</button>
+} @else {
+    <button mat-button (click)="databaseService.login()">Login</button>
+}
